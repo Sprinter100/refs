@@ -1,0 +1,36 @@
+git merge --no-ff - Создать коммит мерджа, даже если можно сделать фаст форвардом.
+git clone [url] name - Клонировать в папку с именем name.
+git reset HEAD <file> - Удалить файл с индекса.
+git checkout -- <file> or "." - Отменить изменения в рабочей директории.
+git diff --staged - команда сравнивает индексированные изменения с последним коммитом.
+git rm --cached - удалить файл из индекса.
+git log -p - показывает разницу, внесенную в каждый коммит.
+git log -<n> - устанавливает лимит на вывод количества коммитов.
+git log --oneline - печатает каждый коммит в одну строку.
+git commit --amend - переделать коммит.
+git remote add [shortname] [url] - добавление удалённого репозитория.
+git fetch [remote-name] - получить изменения с удалённого репозитория.
+git pull [remote-name] - получить изменения с удалённого репозитория и слить со своими.
+git tag - просмотр имеющихся веток.
+git tag <tag_name> - добавление легковесной метки к последнему коммиту.
+git tag -a <tag_name> -m '<message>' - добавление аннотированной метки.
+git push origin [имя метки] - отправить метку на удаленный сервер.
+git push --tags - отправить все метки на удаленный сервер.
+git config --global alias.<alias_name> <command> - создание нового псевдонима. Примеры:
+	git config --global alias.unstage 'reset HEAD --'
+	git config --global alias.lol 'log --oneline'
+	git config --global alias.discard 'checkout --'
+	git config --global alias.co checkout
+	git config --global alias.br branch
+	git config --global alias.ci commit
+	git config --global alias.st status
+git branch -v - последний коммит на каждой из веток.
+git branch -a - список всех веток, включая удалённые (remote)
+git log <branch1> --not <branch2> - Коммиты в ветке 1, которых нет в ветке 2
+git stash save - спрятать индексированные изменения
+git stash apply - вернуть спрятанные изменения
+git stash list - список спрятанных изменений
+git stash apply stash@{n} - вернуть спрятанные изменения под номером n
+git stash drop - удалить спрятанное
+git stash -u - спрятать все незафиксированные изменения, включая неотслеживаемые
+git stash branch <branch> - создать новую ветку от той фиксации, при которой был сделан stash и вернуть в неё спрятанное.

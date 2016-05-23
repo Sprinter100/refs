@@ -1,0 +1,17 @@
+Sublime:
+ctrl+KB - sidebar
+ctrl+p - goto anything
+view>layout - split
+file>prefs>settings user
+ctrl + / - comment line
+ctrl+shift+v - paste with indentation
+ctrl+d - select the word under the cursor, ctrl+d again - multiple selection of this word
+alt+lmb or shift+rmb - block selection
+ctrl+alt+g - select the word in all document
+create macro
+
+https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt
+
+Node js:
+nodemon package (nodemon script.js) - reopens file automatially on change
+global.process
