@@ -1,5 +1,8 @@
 git merge --no-ff - Создать коммит мерджа, даже если можно сделать фаст форвардом.
 git clone [url] name - Клонировать в папку с именем name.
+git reset HEAD~1 - удаляет последний коммит, изменения становятся неиндексированными
+git reset --soft HEAD~1 - удаляет последний коммит, изменения индексированны
+git reset --hard HEAD~1 - удаляет последний коммит, изменения пропадают.
 git reset HEAD <file> - Удалить файл с индекса.
 git checkout -- <file> or "." - Отменить изменения в рабочей директории.
 git diff --staged - команда сравнивает индексированные изменения с последним коммитом.
@@ -34,3 +37,15 @@ git stash apply stash@{n} - вернуть спрятанные изменени
 git stash drop - удалить спрятанное
 git stash -u - спрятать все незафиксированные изменения, включая неотслеживаемые
 git stash branch <branch> - создать новую ветку от той фиксации, при которой был сделан stash и вернуть в неё спрятанное.
+
+
+Пуш в ветку с другим именем:
+
+git branch -u origin/<remote_branch> - привязывает лок. ветку у удал.
+
+git config --global push.default upstream - git push будет пушить лок. ветку в удал-ю (должен быть настроен upstream)
+
+git push -u origin <local_branch>:<remote_branch> - Пуш локальной ветки в удалённую
+
+git co -b <local_branch> origin/<remote_branch> - Создать лок. ветку от удал-й.
+
