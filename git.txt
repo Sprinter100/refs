@@ -43,9 +43,17 @@ git stash branch <branch> - создать новую ветку от той ф�
 
 git branch -u origin/<remote_branch> - привязывает лок. ветку у удал.
 
-git config --global push.default upstream - git push будет пушить лок. ветку в удал-ю (должен быть настроен upstream)
+git config --global push.default upstream - git push будет пушить лок. ветку в удал-ю
 
 git push -u origin <local_branch>:<remote_branch> - Пуш локальной ветки в удалённую
 
 git co -b <local_branch> origin/<remote_branch> - Создать лок. ветку от удал-й.
 
+Удалить коммит в середине:
+
+If rebase is an option, you can rebase and just drop it:
+
+$ git rebase -i 414ceffc^
+If rebase is not an option, you can just revert it:
+
+$ git revert af5c7bf16
