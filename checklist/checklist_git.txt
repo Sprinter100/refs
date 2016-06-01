@@ -1,6 +1,6 @@
 как добавить файлы в коммит?
-  git reset --soft HEAD~1
   git add <нужные файлы>
+  git commit --amend
   git commit
 Как добавить чанки?
   git add --patch
