@@ -1,0 +1,5 @@
+* @param? {Object} templateParams
+Если у класса есть параметр с объектом, его нужно обязательно описывать.
+
+i-utils__hidden = cl.iUtils.Utils.CssClass.HIDDEN
+
