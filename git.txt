@@ -21,7 +21,7 @@ git push origin [имя метки] - отправить метку на уда�
 git push --tags - отправить все метки на удаленный сервер.
 git config --global alias.<alias_name> <command> - создание нового псевдонима. Примеры:
 	git config --global alias.unstage 'reset HEAD --'
-	git config --global alias.lol 'log --oneline'
+	git config --global alias.lol 'log --oneline n 15'
 	git config --global alias.discard 'checkout --'
 	git config --global alias.co checkout
 	git config --global alias.br branch
