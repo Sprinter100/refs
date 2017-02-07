@@ -46,7 +46,7 @@ class Button extends cl.iControl.Control {
         this.viewListen(View.Event.CLICK, this.onClick);
 
         this.autoDispatch(View.Event.TOUCH_START);
-        this.autoDispatch(View.Event.TOUCH_START);
+        this.autoDispatch(View.Event.TOUCH_END);
     };
 
     /**
