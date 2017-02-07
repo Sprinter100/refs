@@ -2,6 +2,12 @@ goog.module('cl.gButton.Button');
 
 goog.require('cl.iControl.Control');
 
+
+/**
+ * Прсвоение переменной результата goog.require не работает в дев режиме (без компиляции),
+ * поэтому модуль нужно запрашивать по-старому
+ */
+goog.require('cl.gButton.View');
 const View = goog.require('cl.gButton.View');
 
 /**
@@ -14,6 +20,11 @@ const Event = {
     TOUCH_END: View.Event.TOUCH_END
 };
 
+/**
+ * Button class
+ * creates a div button that dispathes CLICK, TOUCH_START and TOUCH_END events
+ * and has "enable" and "disable" public methods
+ */
 class Button extends cl.iControl.Control {
     /**
      * @param {Object} view
@@ -35,7 +46,7 @@ class Button extends cl.iControl.Control {
         this.viewListen(View.Event.CLICK, this.onClick);
 
         this.autoDispatch(View.Event.TOUCH_START);
-        this.autoDispatch(View.Event.TOUCH_END);
+        this.autoDispatch(View.Event.TOUCH_START);
     };
 
     /**
@@ -54,7 +65,7 @@ class Button extends cl.iControl.Control {
 
     /**
      * Button on click actions
-     * @param {Object} event
+     * @param {goog.events.Event} event
      * @protected
      */
     onClick(event) {
