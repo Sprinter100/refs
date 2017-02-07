@@ -1,13 +1,12 @@
 goog.module('cl.gButton.Button');
 
 goog.require('cl.iControl.Control');
-
-
 /**
  * Прсвоение переменной результата goog.require не работает в дев режиме (без компиляции),
  * поэтому модуль нужно запрашивать по-старому
  */
 goog.require('cl.gButton.View');
+
 const View = goog.require('cl.gButton.View');
 
 /**
@@ -41,7 +40,7 @@ class Button extends cl.iControl.Control {
      * @override
      */
     enterDocument() {
-        super();
+        super.enterDocument();
 
         this.viewListen(View.Event.CLICK, this.onClick);
 
