@@ -29,6 +29,7 @@ git config --global alias.<alias_name> <command> - создание нового
 	git config --global alias.st status
     git config --global alias.find 'log --oneline --grep'
     git config --global alias.findall 'log --oneline --all --grep'
+git config --global merge.conflictstyle diff3 - При конфликте отображать состояние до обоих изменений
 git branch -v - последний коммит на каждой из веток.
 git branch -a - список всех веток, включая удалённые (remote)
 git log <branch1> --not <branch2> - Коммиты в ветке 1, которых нет в ветке 2
